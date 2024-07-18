@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quvonchbek Sheraliyev Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #002147;
+            scroll-behavior: smooth;
+        }
+        .menu-btn {
+            position: relative;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            top: 22px;
+            right: -620px;
+        }
+        .menu-btn__burger {
+            width: 50px;
+            height: 6px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255,101,47,.2);
+            transition: all .5s ease-in-out;
+            cursor: pointer;
+  
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+  transform: translateY(16px);
+}
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+        header {
+            background-color: #333;
+            color: white;
+            padding: 0;
+            text-align: center;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 15px 20px;
+            font-size: 25px;
+        }
+
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #00BFFF;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #002147;
+            color: white;
+            padding: 2rem;
+            height: 100vh;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .hero h2 {
+            color: #00BFFF;
+            font-size: 50px;
+        }
+
+        .hero p {
+            margin: 1rem 0;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #00abf0;
+            text-decoration: none;
+            margin-left: 12px;
+            transition: .5s;
+            margin-bottom: 30px
+        }
+
+        .social-icons a:hover {
+            background: #00abf0;
+            color: white;
+            border-radius: #00abf0;
+            box-shadow: 0 0 10px #00abf0;
+        }
+
+        .download-resume {
+            padding: 12px 35px;
+            background: #00abf0;
+            border-radius: 40px;
+            font-size: 17px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 0 10px #00abf0;
+        }
+        .download-resume:hover {
+            transition: 1s;
+            background: #00abf0;
+            color: rgb(27, 38, 38);
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem 0;
+        }
+        section a {
+            color: white;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .a {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: fixed;
+                top: 120px;
+                width: 100%;
+                text-align: center;
+                z-index: 1;
+            }
+
+            nav a {
+                padding: 0.5rem;
+                border-bottom: 1px solid #00BFFF;
+            }
+
+            nav a:last-child {
+                border-bottom: none;
+            }
+
+            .fa-bars {
+                display: block;
+            }
+
+            .show-nav {
+                display: flex;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero img {
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 627px) {
+            body {
+                width: 627px;
+                /* overflow-x: scroll; */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .download-resume {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-btn">
+        <div class="menu-btn__burger"></div>
+    </div>
+    <header>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Service</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div>
+            <img src="image.png" alt="" width="400">
+        </div>
+        <div class="hero-content">
+            <h1>Hi, I'm Sheraliyev Quvonchbek</h1>
+            <h2>frontend developer</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo atque architecto repellat debitis labore nisi?</p>
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="https://github.com/000quvonchbek"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/sheral1yev17/"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://www.linkedin.com/in/quvonchbek-sheraliyev-5332b9286/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <a href="#" class="download-resume">Rezyumeni yuklab olish</a>
+        </div>
+    </section>
+    <section class="a" id="about">
+        <h2><a href="about.html">About</a></h2>
+        <p>Men Quvonchbek Sheraliyev, 2004-yil 17-mayda tug'ilganman. Hozirda Tatu Samarqand filialida tahsil olmoqdaman.👨‍🎓</p>
+    </section>
+    <section class="a" id="services">
+        <h2><a href="services.html">Service</a></h2>
+        <p>Qisqacha xizmatlar tavsifi...</p>
+    </section>
+    <section class="a" id="portfolio">
+        <h2><a href="portfolio.html">Portfolio</a></h2>
+        <p>Loyihalar ro'yxati...</p>
+    </section>
+    <section class="a" id="contact">
+        <h2><a href="contact.html">Contact</a></h2>
+        <p>Email: quvonchbek@example.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/quvonchbek">Profilim</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Quvonchbek Sheraliyev. Barcha huquqlar himoyalangan.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bars = document.querySelector('.menu-btn__burger');
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelectorAll('nav a');
+
+            bars.addEventListener('click', function() {
+                nav.classList.toggle('show-nav');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    nav.classList.remove('show-nav');
+                });
+            });
+        });
+    </script>
+     <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.prevent.prevent();
+            }
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

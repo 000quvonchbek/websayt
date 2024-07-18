@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quvonchbek Sheraliyev Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .portfolio-container .sp a{
+            max-width: 1200px;
+            text-decoration: none;
+            color: #00BFFF;
+            font-size: 2rem;
+            position: fixed;
+            top: 42px;
+        }
+        .portfolio-container .ss {
+            max-width: 1200px;
+            text-decoration: none;
+            color: #00BFFF;
+            font-size: 2.5rem;
+            position: fixed;
+            top: 40px;
+            right: 20px;
+        }
+
+        .portfolio-container .ss a {
+            color: #00BFFF;
+        }
+        @media (min-width: 1200px) {
+           .portfolio-container .ss {
+            right: 140px;
+            }
+        }
+
+        .portfolio-container h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #00BFFF;
+        }
+
+        .portfolio-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .portfolio-item {
+            background:transparent;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            border: 1px solid white;
+            padding: 10px;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .portfolio-item img {
+            width: 60%;
+            margin-left: 97px;
+            margin-right: 97px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .portfolio-item-content {
+            padding: 20px;
+        }
+        .portfolio-item-content .user {
+            display: flex;
+            align-items: center;
+            padding-top: 1rem;
+        }
+        .portfolio-item-content .user img {
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+            margin-left: .1px;
+        }
+        .portfolio-item-content .user-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .portfolio-item-content .user-info h3 {
+            margin: 0;
+            color: #00BFFF;
+            font-size: 1.2rem;
+        }
+        .portfolio-item-content .stars {
+            margin-left: auto;
+            color: rgb(241, 9, 218);
+            font-size: 1.5rem;
+        }
+
+        .portfolio-item-content p {
+            font-size: 0.9rem;
+            margin: 10px 0;
+            color: #ddd;
+        }
+
+        .portfolio-item-content .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #00BFFF;
+            text-decoration: none;
+        }
+
+        .portfolio-item-content .read-more:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-container">
+        <span class="sp"><a href="index.html"><ion-icon name="home-outline"></ion-icon></a></span>
+        <span class="ss"><a href="contact.html"><ion-icon name="arrow-forward-circle-outline"></ion-icon></a></span>
+        <h1>Portfolio</h1>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="rolsroys.png" alt="Loyiha 1">
+                <div class="portfolio-item-content">
+                    <h3>rolls royce website</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="user">
+                        <img src="pro.jpg" alt="Jarviz Silvar">
+                        <div class="user-info">
+                            <h3>Jarviz Silvar</h3>
+                            <span>happy customer</span>
+                        </div>
+                    </div>
+                    <p>Bu loyiha haqida qisqacha ma'lumot.</p>
+                    <a href="#" class="read-more">Batafsil</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="rolsroys.png" alt="Loyiha 2">
+                <div class="portfolio-item-content">
+                    <h3>rolls royce website</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="user">
+                        <img src="pro.jpg" alt="Jarviz Silvar">
+                        <div class="user-info">
+                            <h3>Keventin Nrom</h3>
+                            <span>happy customer</span>
+                        </div>
+                    </div>
+                    <p>Bu loyiha haqida qisqacha ma'lumot.</p>
+                    <a href="#" class="read-more">Batafsil</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="rolsroys.png" alt="Loyiha 3">
+                <div class="portfolio-item-content">
+                    <h3>rolls royce website</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="user">
+                        <img src="pro.jpg" alt="Jarviz Silvar">
+                        <div class="user-info">
+                            <h3>Xander Uziel</h3>
+                            <span>happy customer</span>
+                        </div>
+                    </div>
+                    <p>Bu loyiha haqida qisqacha ma'lumot.</p>
+                    <a href="#" class="read-more">Batafsil</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="rolsroys.png" alt="Loyiha 4">
+                <div class="portfolio-item-content">
+                    <h3>rolls royce website</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="user">
+                        <img src="pro.jpg" alt="Jarviz Silvar">
+                        <div class="user-info">
+                            <h3>Fred Yosan</h3>
+                            <span>happy customer</span>
+                        </div>
+                    </div>
+                    <p>Bu loyiha haqida qisqacha ma'lumot.</p>
+                    <a href="#" class="read-more">Batafsil</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="rolsroys.png" alt="Loyiha 5">
+                <div class="portfolio-item-content">
+                    <h3>rolls royce website</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="user">
+                        <img src="pro.jpg" alt="Jarviz Silvar">
+                        <div class="user-info">
+                            <h3>Jeyson Jasm</h3>
+                            <span>happy customer</span>
+                        </div>
+                    </div>
+                    <p>Bu loyiha haqida qisqacha ma'lumot.</p>
+                    <a href="#" class="read-more">Batafsil</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="rolsroys.png" alt="Loyiha 6">
+                <div class="portfolio-item-content">
+                    <h3>rolls royce website</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="user">
+                        <img src="pro.jpg" alt="Jarviz Silvar">
+                        <div class="user-info"> 
+                            <h3>Parker Filip</h3>
+                            <span>happy customer</span>
+                        </div>
+                    </div>
+                    <p>Bu loyiha haqida qisqacha ma'lumot.</p>
+                    <a href="#" class="read-more">Batafsil</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Quvonchbek Sheraliyev. Barcha huquqlar himoyalangan.</p>
+    </footer>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.prevent.prevent();
+            }
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

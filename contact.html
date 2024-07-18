@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quvonchbek Sheraliyev Contact</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #002147;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .portfolio-container .sp {
+            text-decoration: none;
+            color: #00BFFF;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .portfolio-container .ss {
+            text-decoration: none;
+            color: #00BFFF;
+            font-size: 2.5rem;
+            position: fixed;
+            top: 40px;
+            right: 20px;
+        }
+        @media (min-width: 1200px) {
+           .portfolio-container .ss {
+            right: 180px;
+            }
+        }
+        .portfolio-container h1 {
+            top: 20px;
+            font-size: 2rem;
+            flex: 1;
+            text-align: center;
+        }
+
+        .contact-section {
+            padding: 50px 20px;
+        }
+
+        .contact-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #00BFFF;
+        }
+
+        .contact-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background: #333;
+            color: white;
+            font-size: 16px;
+            resize: none;
+        }
+
+        .contact-form input[type="submit"] {
+            background: #00BFFF;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background: #007acc;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-container">
+        <a class="sp" href="index.html"><ion-icon name="home-outline"></ion-icon></a>
+        <h1 style="color: #00BFFF;">Contact</h1>
+        <a class="ss" href="menyu.html"><ion-icon name="arrow-forward-circle-outline"></ion-icon></a>
+    </div>
+
+    <section class="contact-section">
+        <p>If you have any questions, feel free to reach out to me via the form below.</p>
+        <form class="contact-form" action="https://formsubmit.co/quvonchbeksheraliyev000@gmail.com" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="_replyto" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <input type="submit" value="Send">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Quvonchbek Sheraliyev. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.prevent.prevent();
+            }
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
